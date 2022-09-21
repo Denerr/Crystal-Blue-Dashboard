@@ -1,14 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { StyleSheet, ImageBackground, Text, View, TextInput, Pressable, ScrollView } from 'react-native';
+import { ImageBackground, Text, View, TextInput, Pressable, ScrollView } from 'react-native';
 import homeStyles from './style';
+import Dashboard from '../dashboard/dashboard';
 
 export default function Home() {
   const [usuario, setUsuario] = useState("")
   const [senha, setSenha] = useState("")
   const cadastro = () =>{
     if(usuario != "" && senha != ""){
-      alert('Bem Vindo Sr(a) '+(usuario))
+      <Dashboard/>
     }else if(usuario != "" && senha == ""){
       alert('Preencha a Senha!')
     }else{

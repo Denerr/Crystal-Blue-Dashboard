@@ -1,21 +1,13 @@
 export default{
     colors:{
-        primary: '',
-        primary_light: '',
-        primary_dark: '',
-
-        secondary: '',
-        secondary_light: '',
-        secondary_dark: '',
-
-        warn: '',
-        title: '',
-        text: '',
-        background: '',
+        primary: 'cyan',
+        title: 'cyan',
+        text: 'white',
+        background: 'dark_gray',
     },
     fonts: {
-        light: '',
-        regular: '',
-        bold: '',
+        light: '200',
+        regular: '500',
+        bold: '800',
     }
 }

@@ -9,7 +9,6 @@ export default function Home() {
   const [senha, setSenha] = useState("")
   const cadastro = () =>{
     if(usuario != "" && senha != ""){
-      <Dashboard/>
     }else if(usuario != "" && senha == ""){
       alert('Preencha a Senha!')
     }else{

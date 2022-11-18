@@ -1,10 +1,11 @@
+import dashStyles from "./style";
 import React from "react";
-import { Container, Title  } from "./style";
+import { View, Text } from "react-native";
 
-export default function Dashboard(){
+export default function Dashboard() {
     return(
-        <Container>
-            <Title>Bem vindo de volta!</Title>
-        </Container>
-    );
+        <View style={dashStyles.container}>
+            <Text>Ola, bem vindo ao dashboard</Text>
+        </View>
+    )
 }

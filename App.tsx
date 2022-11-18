@@ -1,9 +1,18 @@
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
-import Dashboard from "./src/screens/dashboard/dashboard";
+import dashboard from "./src/screens/dashboard/dashboard";
 import Home from "./src/screens/home/home";
 
+const Stack = createNativeStackNavigator();
+
 export default function App(){
-  return(
-    <Home/>
-  )
+  return (
+    <NavigationContainer>
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Dashboard" component={dashboard} />
+    </Stack.Navigator>
+  </NavigationContainer>
+  );
 }

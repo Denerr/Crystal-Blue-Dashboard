@@ -1,29 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { ImageBackground, Text, View, TextInput, Pressable, ScrollView } from 'react-native';
 import homeStyles from './style';
-import Dashboard from '../dashboard/dashboard';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import routes from '../../routes';
 
 export default function Home() {
-  const [usuario, setUsuario] = useState("")
-  const [senha, setSenha] = useState("")
-  const cadastro = () =>{
-    if(usuario != "" && senha != ""){
-    }else if(usuario != "" && senha == ""){
-      alert('Preencha a Senha!')
-    }else{
-      alert('Preencha o Usuário!')
-    }
-  }
+  const navigation = useNavigation();
   return (
     <View style={homeStyles.container}>
       <StatusBar hidden/>
       <ScrollView>
       <Text style={homeStyles.titleText}>Crystal Blue</Text>
       <ImageBackground  source={require('../../images/breaking_bad_bg2.jpg')} style={homeStyles.image}/>
-      <TextInput placeholder='Usuario...' style={homeStyles.textInput} onChangeText={text=>setUsuario(text)} />
-      <TextInput secureTextEntry={true} placeholder='Senha...' style={homeStyles.textInput} onChangeText={text=>setSenha(text)} />
-      <Pressable style={homeStyles.button} onPress={cadastro}>
+      <TextInput placeholder='Usuario...' style={homeStyles.textInput}/>
+      <TextInput secureTextEntry={true} placeholder='Senha...' style={homeStyles.textInput}/>
+      <Pressable style={homeStyles.button} onPress={() => navigation.navigate("Dashboard",{})}>
         <Text style={{color:'white', fontWeight:'bold'}}>Entrar</Text>
       </Pressable>
       <View style={homeStyles.hairline} />

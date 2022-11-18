@@ -1,20 +1,36 @@
-import styled from "styled-components"
+import { StyleSheet } from "react-native";
+import theme from "../../global/theme";
 
-export const Container = styled.view`
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-    background-image: '../../images/breaking_bad_bg2.jpg';
-`
+const dashStyles = StyleSheet.create({
+    container: {
+        flex:1,
+        backgroundColor: theme.colors.background,
+    },
+    title:{
+        color: theme.colors.title,
+        fontWeight: "bold",
+        fontSize: 45,
+        alignItems: "center",
+        textAlign: "center",
+        marginTop: 75,
+        borderWidth: 1.5,
+        borderRadius: 25,
+        borderColor: theme.colors.primary,
+    },
+    text:{
+        textAlign: "center",
+        fontStyle:"normal",
+        fontWeight:"bold",
+        fontSize: 30,
+        color: theme.colors.primary,
+        marginTop: 25,
+    },
+    image:{
+        alignItems: "center",
+        justifyContent: "center",
+        width: 400,
+        height: 300,
+    }
+})
 
-export const Title = styled.view`
-    text-align: "center";
-    font-style:"normal";
-    font-weight:"bold";
-    font-size: 45;
-    color: "cyan";
-    margin-top: 75;
-    border-width: 1.5;
-    border-radius: 25;
-    border-color: "cyan";
-`
+export default dashStyles;

@@ -6,8 +6,8 @@ export default{
         background: 'dark_gray',
     },
     fonts: {
-        light: '200',
-        regular: '500',
+        light: 200,
+        regular: 500,
         bold: '800',
     }
 }
